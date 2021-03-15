@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en" class="box">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=
+    , initial-scale=1.0"
+    />
+    <meta name-"theme_color" content="#FFFF00"/>
+
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/Blog.css" />
+    <link rel="manifest" href="manifest.json">
+  </head>
+  <body
+    class="select-none w-full flex sm:grid sm:grid-cols-2 gap-1 flex-col place-items-center items-center dark:bg-gray-900"
+  >
+    <div class="w-11/12 flex place-content-between">
+      <div class="flex flex-col">
+        <div class="underline mt-auto text-5xl ml-4 font-thin opacity-40">
+          Blog
+        </div>
+        <a
+          href="index.html"
+          class="bg-gray-900 dark:bg-rose-600 shadow-lg rounded-2xl mt-auto mb-2"
+        >
+          <svg
+            class="w-32 h-12"
+            viewBox="0 0 32 32"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <defs>
+              <style>
+                .cls-1 {
+                  fill: none;
+                  stroke: white;
+                  stroke-linecap: round;
+                  stroke-linejoin: round;
+                  stroke-width: 2px;
+                }
+              </style>
+            </defs>
+            <title />
+            <g id="arrow-left">
+              <line class="cls-1" x1="3" x2="29" y1="16" y2="16" />
+              <line class="cls-1" x1="3" x2="7" y1="16" y2="11" />
+              <line class="cls-1" x1="3" x2="7" y1="16" y2="21" />
+            </g>
+          </svg>
+        </a>
+      </div>
+      <button
+        onclick="change()"
+        class="h-16 w-16 bg-rose-600 dark:bg-white rounded-2xl mb-10 mt-7"
+      >
+        <svg
+          style="enable-background: new 0 0 512 512"
+          version="1.1"
+          viewBox="0 0 512 512"
+          xml:space="preserve"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+        >
+          <g
+            id="_x34_9_x2C__sun_x2C__space_x2C__planet_x2C__astronomy_x2C__weather"
+          >
+            <g>
+              <path
+                class="sun"
+                d="M201.512,318.214c1.607,1.388,1.766,3.847,0.346,5.456    c-1.386,1.576-3.846,1.765-5.454,0.346c-9.618-8.451-17.438-18.92-22.799-30.713c-5.171-11.383-8.041-24.027-8.041-37.303    c0-2.145,1.734-3.878,3.878-3.878c2.145,0,3.88,1.733,3.88,3.878c0,12.172,2.616,23.744,7.315,34.119    C185.557,300.934,192.714,310.488,201.512,318.214 M256.001,173.321c-2.145,0-3.88-1.733-3.88-3.878s1.735-3.879,3.88-3.879    c24.941,0,47.55,10.123,63.915,26.487c16.398,16.397,26.52,39.007,26.52,63.948c0,2.145-1.734,3.879-3.878,3.879    c-2.145,0-3.88-1.734-3.88-3.879c0-22.829-9.271-43.516-24.216-58.461C299.515,182.593,278.83,173.321,256.001,173.321z     M259.879,110.446c0,2.144-1.734,3.878-3.878,3.878c-2.145,0-3.88-1.734-3.88-3.878V97.99c0-2.144,1.735-3.879,3.88-3.879    c2.144,0,3.878,1.735,3.878,3.879V110.446z M449.926,139.582c1.828-1.041,4.193-0.41,5.266,1.418    c1.041,1.861,0.41,4.227-1.42,5.267l-45.09,26.046c-1.861,1.041-4.226,0.41-5.298-1.419c-1.04-1.86-0.41-4.226,1.45-5.266    L449.926,139.582z M383.959,186.565c-1.828,1.072-4.193,0.441-5.266-1.419c-1.072-1.829-0.409-4.193,1.42-5.266l10.814-6.244    c1.83-1.04,4.193-0.41,5.266,1.451c1.041,1.828,0.41,4.193-1.449,5.266L383.959,186.565z M453.771,365.733    c1.83,1.04,2.461,3.405,1.42,5.266c-1.072,1.829-3.438,2.46-5.266,1.419l-45.092-26.046c-1.86-1.04-2.49-3.405-1.45-5.266    c1.072-1.829,3.437-2.46,5.298-1.419L453.771,365.733z M380.113,332.12c-1.829-1.04-2.492-3.438-1.42-5.267    c1.072-1.86,3.438-2.491,5.266-1.419l10.785,6.212c1.859,1.072,2.49,3.438,1.449,5.266c-1.072,1.861-3.436,2.492-5.266,1.451    L380.113,332.12z M259.879,482.152c0,2.111-1.734,3.847-3.878,3.847c-2.145,0-3.88-1.735-3.88-3.847V430.06    c0-2.112,1.735-3.878,3.88-3.878c2.144,0,3.878,1.766,3.878,3.878V482.152z M252.121,401.555c0-2.145,1.735-3.879,3.88-3.879    c2.144,0,3.878,1.734,3.878,3.879v12.455c0,2.145-1.734,3.878-3.878,3.878c-2.145,0-3.88-1.733-3.88-3.878V401.555z     M62.075,372.418c-1.829,1.041-4.194,0.41-5.266-1.419c-1.072-1.86-0.411-4.226,1.419-5.266l45.092-26.046    c1.86-1.041,4.225-0.41,5.266,1.419c1.072,1.86,0.44,4.226-1.419,5.266L62.075,372.418z M128.041,325.435    c1.829-1.072,4.194-0.441,5.266,1.419c1.041,1.829,0.411,4.227-1.42,5.267l-10.814,6.243c-1.83,1.041-4.194,0.41-5.266-1.451    c-1.041-1.828-0.41-4.193,1.418-5.266L128.041,325.435z M58.228,146.267c-1.83-1.04-2.492-3.405-1.419-5.267    c1.072-1.828,3.438-2.459,5.266-1.418l45.092,26.046c1.86,1.04,2.492,3.405,1.419,5.266c-1.041,1.829-3.406,2.46-5.266,1.419    L58.228,146.267z M131.887,179.881c1.831,1.072,2.46,3.437,1.42,5.266c-1.072,1.86-3.438,2.491-5.266,1.419l-10.816-6.212    c-1.828-1.072-2.458-3.438-1.418-5.266c1.072-1.861,3.436-2.491,5.266-1.451L131.887,179.881z M351.543,82.761    c1.072-1.829,3.438-2.46,5.299-1.388c1.828,1.04,2.459,3.438,1.387,5.266l-15.893,27.527c-1.04,1.83-3.438,2.461-5.266,1.389    c-1.859-1.041-2.492-3.438-1.42-5.267L351.543,82.761z M332.12,131.889c-1.072,1.828-3.438,2.459-5.267,1.418    c-1.859-1.072-2.491-3.438-1.419-5.266l2.208-3.816c1.04-1.859,3.405-2.49,5.266-1.449c1.828,1.072,2.46,3.436,1.42,5.297    L332.12,131.889z M453.804,252.122c2.112,0,3.88,1.733,3.88,3.878s-1.768,3.879-3.88,3.879H422.02c-2.145,0-3.88-1.734-3.88-3.879    s1.735-3.878,3.88-3.878H453.804z M401.554,259.879c-2.144,0-3.878-1.734-3.878-3.879s1.734-3.878,3.878-3.878h4.384    c2.145,0,3.878,1.733,3.878,3.878s-1.733,3.879-3.878,3.879H401.554z M358.229,425.361c1.072,1.861,0.441,4.226-1.419,5.298    c-1.829,1.04-4.194,0.409-5.267-1.45l-15.893-27.497c-1.04-1.86-0.408-4.226,1.42-5.267c1.86-1.07,4.226-0.441,5.298,1.42    L358.229,425.361z M325.435,383.959c-1.072-1.828-0.44-4.193,1.419-5.266c1.829-1.041,4.194-0.41,5.267,1.42l2.208,3.846    c1.04,1.829,0.408,4.193-1.42,5.266c-1.86,1.041-4.226,0.411-5.266-1.449L325.435,383.959z M160.457,429.24    c-1.072,1.828-3.438,2.459-5.298,1.419c-1.828-1.072-2.46-3.437-1.419-5.298l15.893-27.527c1.072-1.83,3.438-2.459,5.298-1.389    c1.829,1.041,2.46,3.438,1.388,5.267L160.457,429.24z M179.88,380.113c1.041-1.83,3.406-2.461,5.266-1.42    c1.83,1.072,2.492,3.438,1.419,5.266l-2.208,3.816c-1.072,1.86-3.438,2.49-5.266,1.449c-1.86-1.072-2.49-3.437-1.419-5.266    L179.88,380.113z M58.197,259.879c-2.145,0-3.88-1.734-3.88-3.879s1.735-3.878,3.88-3.878H89.98c2.145,0,3.88,1.733,3.88,3.878    s-1.735,3.879-3.88,3.879H58.197z M110.446,252.122c2.144,0,3.878,1.733,3.878,3.878s-1.734,3.879-3.878,3.879h-4.415    c-2.145,0-3.878-1.734-3.878-3.879s1.733-3.878,3.878-3.878H110.446z M153.739,86.639c-1.041-1.86-0.409-4.226,1.451-5.266    c1.829-1.072,4.194-0.441,5.266,1.418l15.861,27.497c1.072,1.86,0.44,4.226-1.42,5.267c-1.828,1.072-4.194,0.441-5.266-1.42    L153.739,86.639z M186.565,128.041c1.072,1.828,0.411,4.193-1.419,5.266c-1.86,1.041-4.226,0.41-5.266-1.418l-2.208-3.816    c-1.07-1.861-0.44-4.225,1.419-5.297c1.829-1.041,4.194-0.41,5.266,1.449L186.565,128.041z M252.121,29.881    c0-2.145,1.735-3.879,3.88-3.879c2.144,0,3.878,1.734,3.878,3.879v52.059c0,2.145-1.734,3.879-3.878,3.879    c-2.145,0-3.88-1.734-3.88-3.879V29.881z M339.719,172.281c-21.41-21.442-51.021-34.686-83.718-34.686    c-32.7,0-62.31,13.243-83.751,34.686c-21.411,21.41-34.654,51.02-34.654,83.719s13.243,62.309,34.654,83.719    c21.441,21.442,51.051,34.687,83.751,34.687c32.697,0,62.308-13.244,83.718-34.687c21.442-21.41,34.686-51.02,34.686-83.719    S361.161,193.691,339.719,172.281z"
+                fill="white"
+                style="fill-rule: nonzero; clip-rule: evenodd"
+              />
+            </g>
+          </g>
+          <g id="Layer_1" />
+        </svg>
+      </button>
+    </div>
+    <a href="Space_Article.html"
+      class="bg-black dark:bg-white w-10/12 sm:w-11/12 py-0.5 mt-5 rounded-t-3xl rounded-br-3xl group shadow-lg"
+    >
+      <article class="flex flex-col mx-3">
+        <nav class="flex">
+          <p
+            class="text-white dark:text-black w-max transform translate-y-full sm:translate-y-1/2 bg-gray-600 dark:bg-gray-200 opacity-40 dark:bg-opacity-60 group-hover:opacity-80 text-xs sm:text-xl ml-auto px-1 rounded"
+          >
+            21th Sep 2021
+          </p>
+        </nav>
+        <h1 class="text-white dark:text-rose-600 text-3xl">Space</h1>
+        <p
+          class="text-white dark:text-rose-900 text-xs opacity-40 group-hover:opacity-80 mt-1 mb-3"
+        >
+          Space is there for us to explore&nbsp;! and find truth.
+        </p>
+      </article>
+    </a>
+    <a href="#"
+      class="bg-black dark:bg-white w-10/12 sm:w-11/12 py-0.5 mt-5 rounded-t-3xl rounded-br-3xl group shadow-lg"
+    >
+      <article class="flex flex-col mx-3">
+        <nav class="flex">
+          <p
+            class="text-white dark:text-black w-max transform translate-y-full sm:translate-y-1/2 bg-gray-600 dark:bg-gray-200 opacity-40 dark:bg-opacity-60 group-hover:opacity-80 text-xs sm:text-xl ml-auto px-1 rounded"
+          >
+            21th Sep 2021
+          </p>
+        </nav>
+        <h1 class="text-white dark:text-rose-600 text-3xl">Space</h1>
+        <p
+          class="text-white dark:text-rose-900 text-xs opacity-40 group-hover:opacity-80 mt-1 mb-3"
+        >
+          Space is there for us to explore&nbsp;! and find truth.
+        </p>
+      </article>
+    </a>
+    <a href="#"
+      class="bg-black dark:bg-white w-10/12 sm:w-11/12 py-0.5 mt-5 rounded-t-3xl rounded-br-3xl group shadow-lg"
+    >
+      <article class="flex flex-col mx-3">
+        <nav class="flex">
+          <p
+            class="text-white dark:text-black w-max transform translate-y-full sm:translate-y-1/2 bg-gray-600 dark:bg-gray-200 opacity-40 dark:bg-opacity-60 group-hover:opacity-80 text-xs sm:text-xl ml-auto px-1 rounded"
+          >
+            21th Sep 2021
+          </p>
+        </nav>
+        <h1 class="text-white dark:text-rose-600 text-3xl">Space</h1>
+        <p
+          class="text-white dark:text-rose-900 text-xs opacity-40 group-hover:opacity-80 mt-1 mb-3"
+        >
+          Space is there for us to explore&nbsp;! and find truth.
+        </p>
+      </article>
+    </a>
+    <a href="#"
+      class="bg-black dark:bg-white w-10/12 sm:w-11/12 py-0.5 mt-5 rounded-t-3xl rounded-br-3xl group shadow-lg"
+    >
+      <article class="flex flex-col mx-3">
+        <nav class="flex">
+          <p
+            class="text-white dark:text-black w-max transform translate-y-full sm:translate-y-1/2 bg-gray-600 dark:bg-gray-200 opacity-40 dark:bg-opacity-60 group-hover:opacity-80 text-xs sm:text-xl ml-auto px-1 rounded"
+          >
+            21th Sep 2021
+          </p>
+        </nav>
+        <h1 class="text-white dark:text-rose-600 text-3xl">Space</h1>
+        <p
+          class="text-white dark:text-rose-900 text-xs opacity-40 group-hover:opacity-80 mt-1 mb-3"
+        >
+          Space is there for us to explore&nbsp;! and find truth.
+        </p>
+      </article>
+    </a>
+    <a href="#"
+      class="bg-black dark:bg-white w-10/12 sm:w-11/12 py-0.5 mt-5 rounded-t-3xl rounded-br-3xl group shadow-lg"
+    >
+      <article class="flex flex-col mx-3">
+        <nav class="flex">
+          <p
+            class="text-white dark:text-black w-max transform translate-y-full sm:translate-y-1/2 bg-gray-600 dark:bg-gray-200 opacity-40 dark:bg-opacity-60 group-hover:opacity-80 text-xs sm:text-xl ml-auto px-1 rounded"
+          >
+            21th Sep 2021
+          </p>
+        </nav>
+        <h1 class="text-white dark:text-rose-600 text-3xl">Space</h1>
+        <p
+          class="text-white dark:text-rose-900 text-xs opacity-40 group-hover:opacity-80 mt-1 mb-3"
+        >
+          Space is there for us to explore&nbsp;! and find truth.
+        </p>
+      </article>
+    </a>
+    <script src="/public/App.js"></script>
+    <script>
+      let a = 1;
+      function change() {
+        if (a === 1) {
+          document.querySelector(".sun").style.fill = "#F02F3345";
+          document.querySelector(".box").classList.add("dark");
+          a++;
+        } else {
+          document.querySelector(".sun").style.fill = "white";
+          document.querySelector(".box").classList.remove("dark");
+          a--;
+        }
+      }
+    </script>
+  </body>
+</html>
