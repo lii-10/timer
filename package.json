@@ -1,0 +1,48 @@
+{
+  "name": "Tailwind_env",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "NODE_ENV=development postcss build ./src/css/tailwind.css -o public/css/timer.css --verbose -w",
+    "tw:build:i": "npx tailwindcss-cli build ./src/css/tailwind.css -o public/css/index.css ",
+    "tw:build:b": "npx tailwindcss-cli build ./src/css/tailwind.css -o ./public/css/Blog.css",
+    "tw:build:a": "npx tailwindcss-cli build ./src/css/tailwind.css -o ./public/css/Article.css",
+    "tw:build:m": "npx tailwindcss-cli build ./src/css/tailwind.css -o ./public/css/Myself.css",
+    "tw:build:w": "npx tailwindcss-cli build ./src/css/tailwind.css -o ./public/css/Why.css",
+    "tw:build:p": "npx tailwindcss-cli build ./src/css/tailwind.css -o ./public/css/Poem.css",
+    "tw:build:q": "npx tailwindcss-cli build ./src/css/tailwind.css -o ./public/css/Quotes.css",
+    "tw:build:t": "npx tailwindcss-cli build ./src/css/tailwind.css -o ./public/css/toBlow.css",
+    "tw:build:o": "npx tailwindcss-cli build ./src/css/tailwind.css -o ./public/css/Ohm.css",
+    "tw:build:d": "npx tailwindcss-cli build ./src/css/tailwind.css -o ./public/css/Dream.css",
+    "tw:build:n": "npx tailwindcss-cli build ./src/css/tailwind.css -o ./public/css/Whats_next.css",
+    "tw:prod:i": "NODE_ENV=production npx postcss build ./src/css/tailwind.css -o ./public/css/index.css",
+    "tw:prod:b": "NODE_ENV=production npx postcss build ./src/css/tailwind.css -o ./public/css/Blog.css",
+    "tw:prod:a": "NODE_ENV=production npx postcss build ./src/css/tailwind.css -o ./public/css/Article.css",
+    "tw:prod:m": "NODE_ENV=production npx postcss build ./src/css/tailwind.css -o ./public/css/Myself.css",
+    "tw:prod:w": "NODE_ENV=production npx postcss build ./src/css/tailwind.css -o ./public/css/Why.css",
+    "tw:prod:p": "NODE_ENV=production npx postcss build ./src/css/tailwind.css -o ./public/css/Poem.css",
+    "tw:prod:q": "NODE_ENV=production npx postcss build ./src/css/tailwind.css -o ./public/css/Quotes.css",
+    "tw:prod:t": "NODE_ENV=production npx postcss build ./src/css/tailwind.css -o ./public/css/toBlow.css",
+    "tw:prod:o": "NODE_ENV=production npx postcss build ./src/css/tailwind.css -o ./public/css/Ohm.css",
+    "tw:prod:d": "NODE_ENV=production npx postcss build ./src/css/tailwind.css -o ./public/css/Dream.css",
+    "tw:prod:n": "NODE_ENV=production npx postcss build ./src/css/tailwind.css -o ./public/css/Whats_next.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cssnano": "^4.1.10",
+    "postcss-cli": "^8.3.1",
+    "rive-canvas": "^0.6.13",
+    "tailwindcss-cli": "^0.1.2",
+    "vite": "^2.0.5"
+  },
+  "devDependencies": {
+    "@tailwindcss/jit": "^0.1.0",
+    "autoprefixer": "^10.2.5",
+    "postcss": "^8.2.8",
+    "tailwindcss": "^2.0.3"
+  }
+}

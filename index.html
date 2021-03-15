@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="How all this world WorKs,?">
+        <meta name="keywords" content="Divyamrit Blog,Blogs by Divyamrit,Divyamrit Articles">
+        <meta name="author" content="Divyamrit||Sukhpreet Singh">
+        <meta name="theme-color" content="#FFFF00">
+        <title>Divyamrit Blogs</title>
+        <link rel="icon" href="./favicon.ico">
+        <link rel="apple-touch-icon" sizes="180x180" href="./icons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="./icons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./icons/favicon-16x16.png">
+        <link rel="stylesheet" href="./public/css/index.css">
+        <script src="./public/App.js" defer></script>
+        <link rel="manifest" href="manifest.json">
+        <style>
+      .butInstall {
+        background-color: #FF0066;
+        color: white;
+        font-size: 1.2rem;
+        padding: 1rem;
+        border-radius: 9999px;
+      }
+      .divInstall{
+        position: relative;
+        display: flex;
+        padding-bottom: 1rem;
+        justify-content: center;
+      }
+        /* .hidden{
+          display: none;
+        } */
+        </style>
+    </head>
+    <body class="bg-white dark:bg-gray-900 transition-colors duration-700 ease-out">
+       <div class="flex flex-row content-center items-center place-content-between transition duration-1000 ease-in-out p-7">
+            <h1 class="font-mono xs:text-4xl ss:text-5xl sm:text-6xl text-blue-500 dark:text-amber-400">Divyamrit</h1>
+            <nav role="button" onclick="D()">
+                <canvas id="riveCanvas" width="70" height="70"></canvas>
+            </nav>
+          </div>
+        <section class="flex flex-col place-items-center mt-5 gap-5 font-mono">
+            <a href="./public/Real/timer.html" class="w-10/12 bg-rose-500 dark:bg-white px-5 rounded-xl">
+              <button class="text-rose-900 dark:text-rose-500 text-3xl">Timer for Exams</button>
+            </a>
+            <a href="./public/Real/Blog.html" class="text-4xl text-white dark:text-white bg-blue-700  dark:bg-yellow-400 w-10/12 px-7 pt-1 pb-2 text-opacity-90 shadow-2xl rounded-full">
+                Answers
+            </a>
+            <a href="#" class="text-4xl text-white dark:text-white bg-blue-700  dark:bg-yellow-400 w-10/12 px-7 pt-1 pb-2 text-opacity-90 shadow-2xl rounded-full">
+                Quotes
+            </a>
+            <a href="#" class="text-4xl text-white dark:text-white bg-blue-700  dark:bg-yellow-400 w-10/12 px-7 pt-1 pb-2 text-opacity-90 shadow-2xl rounded-full">
+                Myself
+            </a>
+            <a href="#" class="text-4xl text-white dark:text-white bg-blue-700  dark:bg-yellow-400 w-10/12 px-7 pt-1 pb-2 text-opacity-90 shadow-2xl rounded-full">
+                Why all this ?
+            </a>
+            <a href="#" class="text-4xl text-white dark:text-white bg-blue-700  dark:bg-yellow-400 w-10/12 px-7 pt-1 pb-2 text-opacity-90 shadow-2xl rounded-full">
+              Questions to blow mind
+            </a>
+            <a href="#" class="text-4xl text-white dark:text-white bg-blue-700  dark:bg-yellow-400 w-10/12 px-7 pt-1 pb-2 text-opacity-90 shadow-2xl rounded-full">
+              Poem 
+            </a>
+            <a href="#" class="text-4xl text-white dark:text-white bg-blue-700  dark:bg-yellow-400 w-10/12 px-7 pt-1 pb-2 text-opacity-90 shadow-2xl rounded-full">
+              Sound of Ohm
+            </a>
+            <a href="#" class="text-4xl text-white dark:text-white bg-blue-700  dark:bg-yellow-400 w-10/12 px-7 pt-1 pb-2 text-opacity-90 shadow-2xl rounded-full">
+              What's my Dream ?
+            </a>
+            <a href="#" class="text-4xl text-white dark:text-white bg-blue-700  dark:bg-yellow-400 w-10/12 px-7 pt-1 pb-2 text-opacity-90 shadow-2xl rounded-full">
+              Real porpose of App
+            </a>
+            <div class="divInstall">
+              <button class="butInstall">Install App for Fun !</button>
+            </div>
+            <h1 class="text-gray-300 dark:text-gray-800 text-xs">I am not the selfish one but I am most selfish one So be aware.</h1>
+            <h1 class="text-gray-300 dark:text-gray-800 text-xs">All rights are reserved under @Divyamrit Blogs </h1>
+          </section>
+    </body>
+    <!-- <script src="/node_modules/rive-canvas/rive.js"></script> -->
+    <script src="https://unpkg.com/rive-canvas@0.6.5/rive.js"></script>
+    <script>
+    var anim = "Moon";
+    function D() {
+      // first, instantiate the Rive engine and load the WASM file(s)
+      Rive({
+        locateFile: (file) => "https://unpkg.com/rive-canvas@0.6.5/" + file,
+      }).then((rive) => {
+        // Rive's ready to rock 'n roll
+        // Let's load up a Rive animation file...
+        const req = new Request("./assets/riveBueSun/bluesun.riv");
+        fetch(req)
+          .then((res) => {
+            return res.arrayBuffer();
+          })
+          .then((buf) => {
+            // we've got the raw bytes of the animation,
+            // let's load them into a Rive file
+            const file = rive.load(new Uint8Array(buf));
+            // ...
+            const artboard = file.defaultArtboard();
+            const myAnim = artboard.animation(anim);
+            const myAnimInstance = new rive.LinearAnimationInstance(myAnim);
+            const canvas = document.getElementById("riveCanvas");
+            const ctx = canvas.getContext("2d");
+            const renderer = new rive.CanvasRenderer(ctx);
+            artboard.advance(0);
+            ctx.save();
+            renderer.align(
+              rive.Fit.contain,
+              rive.Alignment.center,
+              {
+                minX: 0,
+                minY: 0,
+                maxX: canvas.width,
+                maxY: canvas.height,
+              },
+              artboard.bounds
+            );
+            artboard.draw(renderer);
+            ctx.restore();
+            let lastTime = 0;
+            function draw(time) {
+              if (!lastTime) {
+                lastTime = time;
+              }
+              const elapsedTime = (time - lastTime) / 1000;
+              lastTime = time;
+
+              myAnimInstance.advance(elapsedTime);
+              myAnimInstance.apply(artboard, 1.0);
+              artboard.advance(elapsedTime);
+
+              ctx.clearRect(0, 0, canvas.width, canvas.height);
+              ctx.save();
+              renderer.align(
+                rive.Fit.contain,
+                rive.Alignment.center,
+                {
+                  minX: 0,
+                  minY: 0,
+                  maxX: canvas.width,
+                  maxY: canvas.height,
+                },
+                artboard.bounds
+              );
+              artboard.draw(renderer);
+              ctx.restore();
+
+              requestAnimationFrame(draw);
+            }
+            if (anim == "Sun") {
+              anim = "Moon";
+              document.querySelector('html').classList.add('dark')
+
+            } else {
+              anim = "Sun";
+              document.querySelector('html').classList.remove('dark')
+            }
+            requestAnimationFrame(draw);
+          });
+      });
+    }
+    D();
+    </script>
+</html>
