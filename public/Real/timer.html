@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/timer.css">
+</head>
+<body class="bg-black">
+    <section class="bg-black px-16 py-16 grid grid-cols-2">
+        <span class="m-2 text-xs text-white sm:text-2xl font-mono ">
+            D stands for Remaining Days.
+        </span>
+        <span class="m-2 text-xs text-white sm:text-2xl font-mono ">
+            H stands for Remaining Hour.
+        </span>
+        <span class="m-2 text-xs text-white sm:text-2xl font-mono ">
+            M stands for Remaining Minutes.
+        </span>
+        <span class="m-2 text-xs text-white sm:text-2xl font-mono ">
+            S stands for Remaining Seconds.
+        </span>
+        <span class="m-2 text-xs text-white sm:text-2xl font-mono ">
+            mS stands for Remaining mini Seconds.
+        </span>
+    </section>
+    <section class="bg-black flex flex-row items-center place-content-evenly">
+        <article  class="flex content-center items-center flex-row rounded-xl p-4 bg-gradient-to-tr from-teal-400  to-green-500">
+            <h1 class="sm:block sm:text-[4.5rem] text-white opacity-50">
+                D:
+            </h1>
+            <p id="Day" class="sm:text-[4.5rem] text-white"></p>
+        </article>
+        <article  class="flex content-center items-center flex-row rounded-xl p-4 bg-gradient-to-tr from-teal-400  to-green-500">
+            <h1 class="sm:block sm:text-[4.5rem] text-white opacity-50">
+                H:
+            </h1>
+            <p id="Hou" class="sm:text-[4.5rem] text-white"></p>
+        </article>
+        <article  class="flex content-center items-center flex-row rounded-xl p-4 bg-gradient-to-tr from-teal-400  to-green-500">
+            <h1 class="sm:block sm:text-[4.5rem] text-white opacity-50">
+                M:
+            </h1>
+            <p id="Min" class="sm:text-[4.5rem] text-white"></p>
+        </article>
+        <article  class="flex content-center items-center flex-row rounded-xl p-4 bg-gradient-to-tr from-teal-400  to-green-500">
+            <h1 class="sm:block sm:text-[4.5rem] text-white opacity-50">
+                S:
+            </h1>
+            <p id="Sec" class="sm:text-[4.5rem] text-white"></p>
+        </article>
+        <article  class="flex content-center items-center flex-row rounded-xl p-4 bg-gradient-to-tr from-teal-400  to-green-500">
+            <h1 class="sm:block sm:text-[4.5rem] text-white opacity-50">
+                mS:
+            </h1>
+            <p id="Mis" class="sm:text-[4.5rem] text-white"></p>
+        </article>
+    </section>
+    <script>
+        function countDown(){
+            let now = new Date();
+            let eventDate = new Date(2021,4,6)
+            let currentTime = now.getTime();
+            let eventTime = eventDate.getTime();
+
+            let remTime = eventTime - currentTime;
+
+            let ms = Math.floor(remTime/10);
+            let s = Math.floor(remTime/1000);
+            let m = Math.floor(s/60);
+            let h = Math.floor(m/60);
+            let d = Math.floor(h/24);
+
+            h %= 24 ;
+            m %= 60 ;
+            s %= 60 ;
+            ms %= 100 ;
+            h = (h<10) ? "0" + h : h;
+            m = (m<10) ? "0" + m : m;
+            s = (s<10) ? "0" + s : s;
+            ms = (ms<10) ? "0" + ms:ms;            
+            document.querySelector("#Day").textContent = d ;
+            document.querySelector("#Hou").textContent = h ;
+            document.querySelector("#Min").textContent = m ;
+            document.querySelector("#Sec").textContent = s ;
+            document.querySelector("#Mis").textContent = ms;
+            setTimeout(countDown,1/10)
+        }
+        countDown();
+    </script>
+</body>
+</html>
